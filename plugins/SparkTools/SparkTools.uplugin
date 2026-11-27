@@ -1,0 +1,26 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "Spark Tools",
+	"Description": "Unreal editor on Linux ARM64 (DGX Spark): what the MetaHuman Identity editor does through its UI (camera-frame markers), plus compile/stream waits, callable from Python. Local only.",
+	"Category": "Editor",
+	"CanContainContent": false,
+	"Modules": [
+		{
+			"Name": "SparkTools",
+			"Type": "Editor",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "MetaHuman",
+			"Enabled": true
+		},
+		{
+			"Name": "MetaHumanCharacter",
+			"Enabled": true
+		}
+	]
+}

@@ -262,6 +262,10 @@ I'm not the first to try this, and this port builds on what others found:
   boots and runs headless. It packages games for arm64, and cross-builds them for x86_64/SteamOS, from the Spark. It
   also has GameForge, a pipeline that generates assets locally and drives the editor through its own Remote
   Control-based MCP server.
+- **JimmyToluene**'s [ue5-dgx-spark](https://github.com/JimmyToluene/ue5-dgx-spark) (16 Nov 2026), built on MrQbit's
+  patch, got the UE 5.4 editor window and viewport rendering on the GB10: Lumen with software ray tracing, and Nanite
+  with a streaming fix, at 80–119 fps in `-game`. By its own README, FBX and several x86-only libraries are
+  placeholders, and packaging, Play In Editor and hardware ray tracing are not tested.
 
 | | MrQbit/unreal-dgx (Jul 2026) | This port |
 |---|---|---|

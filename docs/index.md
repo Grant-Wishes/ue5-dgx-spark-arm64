@@ -13,10 +13,11 @@ editor modules. The walls they listed were x86-only toolchain assumptions, the b
 Opus and the ISPC texture compressor. As of 27 November, nobody from Epic has answered. Before that, years of threads about
 Jetson boards, Raspberry Pis and AArch64 workstations end the same way: it isn't supported, so it can't be done.
 
-The furthest public attempt I found was MrQbit's unreal-dgx (July 2026). On UE 5.4 its editor boots and runs
-headless, it packages games for arm64 (and cross-builds them for SteamOS), and it drives the editor from an AI chat
-through its own MCP server. The GUI editor was still on its to-do list. I wanted three things: the current engine,
-the real editor with its window, and MetaHuman. And then the thing the thread actually asked for: Epic's MCP plugin.
+The public attempts I found were all on UE 5.4. MrQbit's unreal-dgx (July 2026) boots the editor headless, packages
+games for arm64 and SteamOS, and drives the editor from an AI chat through its own MCP server; the GUI editor was
+still to do. In mid-November, JimmyToluene's ue5-dgx-spark built on that patch and got the editor window rendering,
+with Lumen and Nanite. I wanted three things: the current engine, the complete editor with every default plugin, and
+MetaHuman. And then the thing the thread actually asked for: Epic's MCP plugin.
 
 ## The result
 
@@ -206,7 +207,8 @@ Everything is in the repository: <https://github.com/Grant-Wishes/ue5-dgx-spark-
 
 I didn't plan to port Unreal. I had a DGX Spark for something else: I wanted to test the models that turn a 360°
 video into a 3D model, and make a MetaHuman out of it for a side project. Then I found out there was no complete port
-of Unreal for the Spark: a few attempts on 5.4, no GUI editor, no MetaHuman. So I built one. The machine was there
+of Unreal for the Spark: a few attempts on 5.4, one of them just reaching the editor window, none with MetaHuman. So I
+built one. The machine was there
 anyway, and the fact that nobody had done it yet was half the fun.
 
 The big decisions were mine: 5.8, the latest, instead of 5.4; the real editor with its window; MetaHuman; and in the
